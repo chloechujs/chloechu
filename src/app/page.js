@@ -9,7 +9,7 @@ export default function Home() {
       <Hero />
       
       {/* WORKS Title Section */}
-      <section className="w-full bg-primary-orange py-10">
+      <section className="w-full bg-primary-orange">
         <div className="flex justify-center">
           <h1 className="text-primary-gray font-bold font-mango text-[350px] leading-[350px]">
             WORKS

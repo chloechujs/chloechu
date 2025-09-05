@@ -47,9 +47,9 @@ export default function Hero() {
   const rotation = getCharacterRotation();
 
   return (
-    <div className="w-full max-w-[1440px] h-screen relative mx-auto overflow-hidden pt-40">
+    <div className="w-full max-w-[1440px] h-[960px] relative mx-auto overflow-hidden pt-40">
       {/* Background */}
-      <div className="w-full h-full left-0 top-0 absolute bg-primary-gray" />
+      <div className="w-full left-0 top-0 absolute bg-primary-gray" />
       
       {/* WEB - 在人物后面 (z-index 更低) */}
       <div className="left-[200px] top-[250px] absolute text-primary-orange font-bold font-mango z-10" style={{ fontSize: '350px', lineHeight: '350px', letterSpacing: '0.01em', transform: 'scaleY(0.65)' }}>
@@ -86,7 +86,7 @@ export default function Hero() {
             }}
           >
             <img 
-              className="w-[600px] h-[700px] object-cover filter drop-shadow-2xl"
+              className="w-[600px] h-[810px] object-cover filter drop-shadow-2xl"
               src="/chloechu.png" 
               alt="Portfolio Character" 
               style={{
@@ -168,13 +168,20 @@ export default function Hero() {
         UI/UX
       </div>
       
+      {/* Arrow under UI/UX */}
+      <div className="left-[65px] top-[680px] absolute z-30">
+        <div className="w-28 h-36 relative overflow-hidden">
+          <div className="w-28 h-36 left-0 top-0 absolute bg-primary-orange" />
+        </div>
+      </div>
+      
       {/* DESIGNER - 右下 */}
       <div className="left-[700px] top-[600px] absolute text-primary-orange font-bold font-mango z-30" style={{ fontSize: '350px', lineHeight: '350px', letterSpacing: '0.01em', transform: 'scaleY(0.65)' }}>
         DESIGNER
       </div>
       
       {/* Side Content */}
-      <div className="left-[1085px] top-[250px] absolute text-primary-orange font-bold font-['Inter'] leading-loose z-30" style={{ fontSize: '28px !important', lineHeight: '36px !important', width: '320px', height: 'auto' }}>
+      <div className="w-80 h-32 left-[1085px] top-[250px] absolute text-primary-orange font-bold font-['Inter'] leading-loose z-30" style={{ fontSize: '20px', lineHeight: '32px' }}>
         I transform ideas into bold and luxurious digital brands & websites — designed to stand out, sell smart, and scale beautifully.
       </div>
       

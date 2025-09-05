@@ -28,7 +28,7 @@ export default function WorkSection() {
   ];
 
   return (
-    <section className="mx-auto relative py-20 bg-primary-orange" id="works">
+    <section className="mx-auto relative pb-20 bg-primary-orange" id="works">
       {/* Works Grid */}
       <div className="relative z-10 flex flex-col items-center space-y-20">
         {works.map((work, index) => (
