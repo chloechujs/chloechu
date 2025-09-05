@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Next.js 网站
 
-## Getting Started
+本项目使用 Next.js、JavaScript（非 TypeScript）、Tailwind CSS、ESLint 构建，采用 App Router 和 src 目录结构。
 
-First, run the development server:
+## 启动项目
 
-```bash
+```powershell
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+访问 http://localhost:3000 查看网站。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 主要特性
+- JavaScript 支持（已从 TypeScript 转换）
+- Tailwind CSS 集成
+- ESLint 代码规范
+- App Router 架构
+- src 目录结构
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 目录结构
+- `src/app/`：页面路由
+  - `page.js`：首页
+  - `layout.js`：全局布局
 
-## Learn More
+## 开发建议
+- 使用纯 JavaScript，无需 TypeScript 知识
+- 按需扩展页面和组件
+- 使用 Tailwind CSS 快速样式化
 
-To learn more about Next.js, take a look at the following resources:
+- [x] Clarify Project Requirements
+- [x] Scaffold the Project
+- [x] Customize the Project
+- [x] Install Required Extensions
+- [x] Compile the Project
+- [x] Create and Run Task
+- [ ] Launch the Project
+- [ ] Ensure Documentation is Complete
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Progress Summary
+- 已完成 Next.js 项目初始化。
+- 已将 TypeScript 文件转换为 JavaScript（.tsx → .js）。
+- 更新了页面内容为中文。
+- 开发服务器已启动，运行在 http://localhost:3000。
+- README.md 已生成。

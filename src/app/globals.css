@@ -1,26 +1,124 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  @font-face {
+    font-family: 'Mango Grotesque';
+    src: url('/fonts/MangoGrotesque-Bold.woff2') format('woff2'),
+         url('/fonts/MangoGrotesque-Bold.woff') format('woff'),
+         url('/fonts/MangoGrotesque-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Mango Grotesque';
+    src: url('/fonts/MangoGrotesque-Regular.woff2') format('woff2'),
+         url('/fonts/MangoGrotesque-Regular.woff') format('woff'),
+         url('/fonts/MangoGrotesque-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: initial;
+    font-display: swap;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .text-primary-orange {
+    color: #E76D02;
+  }
+  .bg-primary-orange {
+    background-color: #E76D02;
+  }
+  .text-primary-gray {
+    color: #ECECEC;
+  }
+  .bg-primary-gray {
+    background-color: #ECECEC;
+  }
+  .border-primary-orange {
+    border-color: #E76D02;
+  }
+  .font-mango {
+    font-family: 'Mango Grotesque', sans-serif;
+    letter-spacing: 0%;
+  }
+  .text-64px {
+    font-size: 64px;
+    line-height: 1.1;
+  }
+  .large-text {
+    font-feature-settings: "kern" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .bg-skin-color {
+    background-color: #f4c2a1;
+  }
+}
+
+/* 3D动效和眨眼动画 */
+@layer components {
+  .character-3d {
+    transform-style: preserve-3d;
+    will-change: transform;
+    perspective: 1200px;
+  }
+  
+  .hair-sway {
+    animation: hairSway 4s ease-in-out infinite;
+    transform-origin: center top;
+  }
+  
+  @keyframes hairSway {
+    0%, 100% { transform: translateX(0px) rotate(0deg); }
+    25% { transform: translateX(2px) rotate(1deg); }
+    50% { transform: translateX(0px) rotate(0deg); }
+    75% { transform: translateX(-2px) rotate(-1deg); }
+  }
+  
+  .eye-blink {
+    animation: blink 0.15s ease-in-out;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  
+  .floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+  
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+  
+  /* 转身动画 */
+  .character-turn {
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  /* 呼吸效果 */
+  .breathing {
+    animation: breathing 4s ease-in-out infinite;
+  }
+  
+  @keyframes breathing {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
+}
+
+@layer base {
+  * {
+    border: 1px solid transparent;
+  }
+  body {
+    background-color: white;
+    color: #3d3d3d;
+  }
 }
