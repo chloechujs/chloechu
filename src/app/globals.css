@@ -48,6 +48,12 @@
     font-size: 64px;
     line-height: 1.1;
   }
+  .mt-400 {
+    margin-top: 400px;
+  }
+  .space-y-20 > * + * {
+    margin-top: 5rem;
+  }
   .large-text {
     font-feature-settings: "kern" 1;
     text-rendering: optimizeLegibility;
